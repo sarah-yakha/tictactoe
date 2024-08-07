@@ -28,7 +28,6 @@ gameItem.forEach((item) =>{
     if(item.textContent){
         return;
     }
-
     if(!item.classList.contains('nulik') && !item.classList.contains('krestik')){
         item.classList.add(step)
         if(step == 'krestik'){
@@ -36,10 +35,7 @@ gameItem.forEach((item) =>{
         }
         if(step == 'nulik'){
             item.textContent = "0";
-        }
-    
-      
-        
+        }  
     }
     counter ++;
     who();
@@ -73,7 +69,7 @@ let win =
         gameItem[win[i][2]].classList.add('winColor')
         winner = "Нулики"
         endGame(winner);
-        return ;
+        return 1;
        }
     }
  }
@@ -90,7 +86,7 @@ let win =
         gameItem[win[i][2]].classList.add('winColor')
         winner = "Крестики"
         endGame(winner);
-        return ;
+        return 1;
        }
     }
  }
